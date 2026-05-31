@@ -1,0 +1,458 @@
+.section {
+  padding: 5rem 1rem;
+  background: transparent;
+  font-family: Inter, -apple-system, sans-serif;
+}
+
+.section:nth-child(even) { background: transparent; }
+
+.container { max-width: 1100px; margin: 0 auto; }
+
+.sectionLabel {
+  text-align: center;
+  color: #8b949e;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem;
+}
+
+.sectionTitle {
+  text-align: center;
+  color: #fff;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin: 0 0 2.6rem;
+  font-family: "Changa One", sans-serif;
+}
+
+/* ── About ── */
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.aboutText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.aboutImg img {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid #222;
+  display: block;
+}
+
+.aboutCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  margin-bottom: 1.4rem;
+}
+
+.aboutCard {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 1.1rem;
+  text-align: center;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.aboutCard:hover { border-color: #58a6ff66; transform: translateY(-3px); }
+
+.aboutCardIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #fff;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.aboutCardIcon svg { width: 22px; height: 22px; color: currentColor; }
+.aboutCard:hover .aboutCardIcon { transform: translateY(-1px) scale(1.05); opacity: 0.92; }
+
+.aboutCard h4 {
+  color: #fff;
+  margin: 0.5rem 0 0.25rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: "Changa One", sans-serif;
+}
+
+.aboutCard p { color: #aaa; font-size: 0.85rem; margin: 0; line-height: 1.5; min-height: 3.4rem; }
+.aboutDesc { color: #bbb; line-height: 1.8; margin: 0; font-size: 0.95rem; }
+
+/* ── Card ── */
+.card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 14px;
+  padding: 1.3rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.card:hover { border-color: #58a6ff66; transform: translateY(-3px); }
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.cardTitle { color: #fff; font-size: 1rem; font-weight: 700; margin: 0; font-family: "Changa One", sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; letter-spacing: 0.08em; }
+.cardSub { color: #ccc; font-size: 0.9rem; margin: 0.3rem 0; }
+.cardMuted { color: #8b949e; font-size: 0.88rem; margin: 0.2rem 0 0.6rem; line-height: 1.6; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.cardBody { padding: 0; }
+
+.badge {
+  background: #1c2128;
+  border: 1px solid #30363d;
+  color: #8b949e;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.chip {
+  background: #1c2128;
+  border: 1px solid #30363d;
+  color: #c9d1d9;
+  font-size: 0.78rem;
+  padding: 0.22rem 0.55rem;
+  border-radius: 999px;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Timeline ── */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  max-width: 780px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #58a6ff, #a78bfa);
+  border-radius: 2px;
+  animation: drawLine 1.2s ease forwards;
+  animation-play-state: paused;
+}
+
+.timeline.animated::before {
+  animation-play-state: running;
+}
+
+.timelineItem {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 0.8rem;
+  align-items: start;
+}
+
+.timelineDot { width: 12px; height: 12px; background: #58a6ff; border-radius: 50%; margin-top: 0.5rem; flex-shrink: 0; }
+.bulletList { color: #aaa; font-size: 0.9rem; padding-left: 1.1rem; margin: 0.6rem 0 0; line-height: 1.8; }
+
+/* ── Skills ── */
+.skillIntro {
+  text-align: center;
+  color: #8b949e;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 0.4rem;
+}
+
+.skillHeading {
+  text-align: center;
+  color: #fff;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin: 0 0 1.8rem;
+  font-family: "Changa One", sans-serif;
+}
+
+.skillCatGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 0.9rem;
+}
+
+@media (max-width: 900px) { .skillCatGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .skillCatGrid { grid-template-columns: 1fr; } }
+
+.skillCatCard {
+  background: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 10px;
+  padding: 0.9rem 0.8rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.skillCatCard:hover { border-color: #3a3f47; transform: translateY(-3px); }
+
+.skillCatHeader { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.7rem; }
+
+.skillCatIcon {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 7px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: #fff;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.skillCatCard:hover .skillCatIcon { transform: translateY(-1px) scale(1.06); opacity: 0.92; }
+.skillCatTitle { color: #e6edf3; font-size: 0.82rem; font-weight: 600; }
+
+.skillChipGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; }
+
+.skillChipGrid > .skillChip:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: calc(50% - 0.2rem);
+}
+
+.skillChip {
+  background: #161b22;
+  border: 1px solid #30363d;
+  color: #c9d1d9;
+  border-radius: 7px;
+  padding: 0.34rem 0.45rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-align: center;
+  cursor: default;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.skillChip:hover { background: #21262d; color: #fff; border-color: #58a6ff44; }
+
+/* ── Projects ── */
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 320px));
+  justify-content: center;
+  gap: 1.1rem;
+}
+
+.projectCard {
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.projectCardBody {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.projectImgPlaceholder {
+  background: #1a1a1a;
+  border: 1px solid #252525;
+  border-radius: 9px;
+  height: 145px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.7rem;
+}
+
+.projectImg {
+  width: 100%;
+  height: 145px;
+  object-fit: cover;
+  border-radius: 9px;
+  margin-bottom: 0.7rem;
+  display: block;
+  border: 1px solid #252525;
+}
+
+.projectImgPlaceholder svg { width: 42px; height: 42px; color: #fff; opacity: 0.92; transition: transform 0.2s ease, opacity 0.2s ease; }
+.card:hover .projectImgPlaceholder svg { transform: translateY(-1px) scale(1.04); opacity: 1; }
+
+.techRow { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.5rem 0; }
+.projectLinks { display: flex; gap: 0.5rem; margin-top: auto; padding-top: 0.7rem; }
+
+.linkBtn {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  color: #ccc;
+  padding: 0.4rem 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+
+.projectLinkIcon { display: inline-flex; align-items: center; justify-content: center; }
+.projectLinkIcon svg { width: 14px; height: 14px; color: currentColor; }
+.linkBtn:hover { background: #2c2c2c; color: #fff; }
+
+.linkBtnAlt {
+  composes: linkBtn;
+  background: #fff;
+  color: #000;
+  border-color: #ddd;
+}
+
+.linkBtnAlt:hover { background: #e0e0e0; }
+
+/* ── Contact ── */
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 1.9rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.contactInfo { display: flex; flex-direction: column; gap: 0.95rem; }
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.72rem 0.85rem;
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 9px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.contactItem:hover { border-color: #58a6ff66; transform: translateX(4px); }
+.contactIcon { font-size: 1.05rem; margin-top: 0.1rem; color: #fff; transition: transform 0.2s ease, opacity 0.2s ease; }
+.contactItem:hover .contactIcon { transform: translateY(-1px) scale(1.05); opacity: 0.92; }
+
+.contactLabel { color: #8b949e; font-size: 0.73rem; margin: 0 0 0.15rem; text-transform: uppercase; font-weight: 600; letter-spacing: 0.05em; }
+.contactValue { color: #e6edf3; font-size: 0.82rem; text-decoration: none; word-break: break-word; transition: color 0.2s; }
+.contactValue:hover { color: #fff; }
+
+.contactForm { display: flex; flex-direction: column; gap: 0.65rem; }
+
+.contactForm input,
+.contactForm textarea {
+  background: #111;
+  border: 1px solid #2a2a2a;
+  border-radius: 9px;
+  color: #e6edf3;
+  padding: 0.65rem 0.8rem;
+  font: inherit;
+  font-size: 0.86rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus { border-color: #58a6ff; }
+.contactForm input::placeholder,
+.contactForm textarea::placeholder { color: #555; }
+
+.contactForm button {
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 9px;
+  padding: 0.68rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.contactForm button:hover { background: #ddd; transform: translateY(-1px); }
+.formMsg { color: #8fc98f; font-size: 0.88rem; margin: 0; }
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+  .aboutGrid, .contactGrid { grid-template-columns: 1fr; }
+  .aboutImg { max-width: 300px; margin: 0 auto; }
+}
+
+/* ── Certificates ── */
+.certGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+
+.certCard {
+  background: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 14px;
+  padding: 1.2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.certCard:hover { border-color: #3a3f47; transform: translateY(-3px); }
+
+.certIconWrap {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  color: #fff;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.certCard:hover .certIconWrap { transform: translateY(-1px) scale(1.04); opacity: 0.92; }
+.certBody { flex: 1; min-width: 0; }
+
+.certTitle { color: #fff; font-size: 0.92rem; font-weight: 700; margin: 0 0 0.25rem; line-height: 1.4; font-family: "Changa One", sans-serif; }
+.certIssuer { color: #8b949e; font-size: 0.82rem; margin: 0 0 0.6rem; }
+
+.certFooter { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.4rem; }
+
+.certDate {
+  background: #161b22;
+  border: 1px solid #30363d;
+  color: #8b949e;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+
+.certLink { color: #58a6ff; font-size: 0.8rem; text-decoration: none; font-weight: 600; }
+.certLink:hover { color: #79c0ff; text-decoration: underline; }
