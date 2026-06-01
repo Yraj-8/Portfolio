@@ -27,7 +27,7 @@ export default function About() {
         <div className={styles.aboutGrid}>
           <div className={styles.aboutImg}>
             <img
-              src="/assets/Personal.jpg"
+              src={`${import.meta.env.BASE_URL}assets/Personal.jpg`}
               alt="Yashawant Raj"
             />
           </div>
